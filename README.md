@@ -12,3 +12,20 @@ Sampling frequency: 256 Hz
 Timestamps per recording: variable as per recordings
 
 The notebook provides a reproducible pipeline: preprocessing → feature extraction → model training → evaluation.
+
+# Repo Structure
+
+ADHD-detection-using-ML/
+├─ ADHD.zip # EEG dataset (compressed)
+├─ ADHD_detection.ipynb # Google Colab notebook with full pipeline
+├─ README.md # ← this file
+
+# Data
+
+The dataset is provided as ADHD.zip. Unzip it to access the EEG data files.
+
+# Format
+
+Each subject: multichannel EEG time series (19 channels).
+File format: .mat with shape [timestamp, channel].
+Labels: 0 = non-ADHD, 1 = ADHD.
