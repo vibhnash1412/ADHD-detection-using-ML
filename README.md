@@ -62,7 +62,7 @@ Labels: 0 = non-ADHD, 1 = ADHD.
 
   - Apply filtering → extract PSD features for each channel and band.
 
-   -Store results in Pandas DataFrames.
+  - Store results in Pandas DataFrames.
 
 4. Dataset Construction
 
@@ -74,9 +74,9 @@ Labels: 0 = non-ADHD, 1 = ADHD.
 
 5. Model Training
 
-   - Define features (X) and labels (y).
+  - Define features (X) and labels (y).
 
-   - Train multiple classifiers with 5-fold cross-validation:
+  - Train multiple classifiers with 5-fold cross-validation:
 
    - Random Forest
 
