@@ -39,3 +39,59 @@ Each subject: multichannel EEG time series (19 channels).
 File format: .mat with shape [timestamp, channel].
 
 Labels: 0 = non-ADHD, 1 = ADHD.
+
+# Procedure
+
+1. Load and Extract Data
+
+  - Upload the dataset (ADHD.zip) to your Colab environment.
+
+  - Unzip the files for access.
+
+2. Preprocessing Functions
+
+  - Define EEG frequency bands (delta, theta, alpha, beta, gamma).
+
+  - Implement bandpass and notch filters for noise removal.
+
+  - Define a function to compute Power Spectral Density (PSD).
+
+3. Feature Extraction
+
+  - Load .mat EEG files for both ADHD and Control groups.
+
+  - Apply filtering → extract PSD features for each channel and band.
+
+   -Store results in Pandas DataFrames.
+
+4. Dataset Construction
+
+  - Convert per-subject PSD values into feature vectors (Channel × Band).
+
+  - Flatten into a single row per subject.
+
+  - Merge ADHD and Control datasets into a feature matrix (subjects × features) with labels.
+
+5. Model Training
+
+   - Define features (X) and labels (y).
+
+   - Train multiple classifiers with 5-fold cross-validation:
+
+   - Random Forest
+
+   - Logistic Regression
+
+   - Support Vector Machine (SVM)
+
+   - CNN
+
+   - 5 Layer Vanilla FFN
+
+   - FFN with Residual Connection
+
+6. Evaluation
+
+  - Compare accuracies of all models.
+
+  - Select the best-performing model for ADHD detection.
